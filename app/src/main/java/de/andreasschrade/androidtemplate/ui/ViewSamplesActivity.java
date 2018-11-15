@@ -59,6 +59,7 @@ public class ViewSamplesActivity extends BaseActivity {
     @Override
     protected int getSelfNavDrawerItem() {
         return R.id.nav_samples;
+
     }
 
     @Override
