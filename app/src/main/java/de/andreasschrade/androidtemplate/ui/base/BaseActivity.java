@@ -9,6 +9,10 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.FirebaseAuth;
 
 import de.andreasschrade.androidtemplate.R;
 import de.andreasschrade.androidtemplate.ui.SettingsActivity;
@@ -32,6 +36,8 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private Toolbar actionBarToolbar;
+
+
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {

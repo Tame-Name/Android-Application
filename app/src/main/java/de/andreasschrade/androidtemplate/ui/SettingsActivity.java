@@ -6,6 +6,8 @@ import android.support.v7.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import de.andreasschrade.androidtemplate.R;
 import de.andreasschrade.androidtemplate.ui.base.BaseActivity;
 
@@ -21,6 +23,7 @@ public class SettingsActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         setupToolbar();
+
     }
 
     private void setupToolbar() {
