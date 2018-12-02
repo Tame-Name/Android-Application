@@ -159,17 +159,19 @@ public class ViewSamplesActivity extends BaseActivity {
             String resultText = "";
             for (int i = 0; i < products.count(); i++) {
                 JSON productInfo = products.index(i);
-                String ingredients = "INGREDIENTS:\n ";
+                String ingredients = "   INGREDIENTS:\n ";
                 for (int j = 0; j < productInfo.key("ingredients").count(); j++) {
-                    if( j != 0){
-                        ingredients += ", ";
+                    if(j == 0){
+                        ingredients += "     •";
+                    }else{
+                        ingredients += "\n      •";
                     }
                     ingredients += productInfo.key("ingredients").index(j).stringValue();
                 }
 
                 resultText += String.format("\n\n %s \n %s  \n\n  %s",
 
-                        productInfo.key("sourceDisplayName").stringValue(),
+                        (i+1)+") "+productInfo.key("sourceDisplayName").stringValue(),
                         productInfo.key("id").stringValue(),
                         ingredients
 
