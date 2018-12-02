@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import de.andreasschrade.androidtemplate.R;
 import de.andreasschrade.androidtemplate.ui.quote.ListActivity;
-
+import de.andreasschrade.androidtemplate.ui.ViewSamplesActivity;
 public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
 
@@ -158,7 +158,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     }
 
     private void openDashBoard(){
-        Intent intent = new Intent(this, ListActivity.class);
+        Intent intent = new Intent(this, ViewSamplesActivity.class);
         startActivity(intent);
     }
 
