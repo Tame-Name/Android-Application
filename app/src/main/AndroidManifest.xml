@@ -29,7 +29,7 @@
             android:parentActivityName=".ui.quote.ListActivity" />
         <activity
             android:name=".ui.ViewSamplesActivity"
-            android:label="Samples"
+            android:label="Picky Eater"
             android:parentActivityName=".ui.quote.ListActivity" />
         <activity
             android:name=".ui.SettingsActivity"
