@@ -41,6 +41,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import de.andreasschrade.androidtemplate.ui.base.LoginActivity;
 import de.andreasschrade.androidtemplate.ui.quote.ListActivity;
 import eu.amirs.JSON;
 
@@ -81,6 +82,7 @@ public class ViewSamplesActivity extends BaseActivity {
     public void onFabClicked(View view) {
         new RetrieveFeedTask().execute();
     }
+
 
     private void setupToolbar() {
         final ActionBar ab = getActionBarToolbar();

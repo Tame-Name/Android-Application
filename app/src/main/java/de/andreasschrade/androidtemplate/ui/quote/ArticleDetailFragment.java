@@ -1,8 +1,10 @@
 package de.andreasschrade.androidtemplate.ui.quote;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,10 +17,13 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import de.andreasschrade.androidtemplate.R;
 import de.andreasschrade.androidtemplate.dummy.DummyContent;
 import de.andreasschrade.androidtemplate.ui.base.BaseActivity;
 import de.andreasschrade.androidtemplate.ui.base.BaseFragment;
+import de.andreasschrade.androidtemplate.ui.base.LoginActivity;
 
 /**
  * Shows the quote detail page.
@@ -93,12 +98,14 @@ public class ArticleDetailFragment extends BaseFragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_settings:
-                // your logic
-                return true;
+//            case R.id.action_SignOut:
+//                openAuth();
+//                Log.w("myApp", "no network");
+//                return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
 
     public static ArticleDetailFragment newInstance(String itemID) {
         ArticleDetailFragment fragment = new ArticleDetailFragment();

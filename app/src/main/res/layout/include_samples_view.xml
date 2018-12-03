@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,15 +9,10 @@
         android:id="@+id/samples_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/samples_fab"
+        android:layout_above="@+id/fab"
+        android:background="@color/colorPrimary"
         android:orientation="vertical"
         android:padding="@dimen/regular_offset">
-
-        <TextView
-            android:id="@+id/sample_title"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/sample_subhead"
@@ -24,7 +20,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="Create A New Meal" />
+            android:fontFamily="@font/fredoka_one"
+            android:text="Enter information in the fields below to create a meal:"
+            android:textColor="@android:color/white"
+            android:textColorLink="@color/colorAccent"
+            android:textSize="18sp" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/sample_text_username_layout"
@@ -35,52 +35,89 @@
             <EditText
                 android:id="@+id/input1"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:hint="Dish" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/transparentWhite"
+                android:fontFamily="@font/fredoka_one"
+                android:hint="Dish"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/transparentWhite"
+                android:textColorLink="@color/colorAccent" />
 
         </android.support.design.widget.TextInputLayout>
 
         <EditText
             android:id="@+id/input2"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:hint="Calories" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparentWhite"
+            android:fontFamily="@font/fredoka_one"
+            android:hint="Calories"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/transparentWhite"
+            android:textColorLink="@color/colorAccent" />
 
         <EditText
             android:id="@+id/input3"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:hint="Protein" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparentWhite"
+            android:fontFamily="@font/fredoka_one"
+            android:hint="Protein"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/transparentWhite"
+            android:textColorLink="@color/colorAccent" />
 
         <EditText
             android:id="@+id/input4"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:hint="Fat" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparentWhite"
+            android:fontFamily="@font/fredoka_one"
+            android:hint="Fat"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/transparentWhite"
+            android:textColorLink="@color/colorAccent" />
 
         <EditText
             android:id="@+id/input5"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:hint="Meals  (Count)" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparentWhite"
+            android:fontFamily="@font/fredoka_one"
+            android:hint="Meals  (Count)"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/transparentWhite"
+            android:textColorLink="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="75dp"
+            app:srcCompat="@drawable/chicken_dinner" />
 
 
     </LinearLayout>
 
     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/samples_fab"
+        android:id="@+id/fab"
         android:layout_width="match_parent"
-        android:layout_height="128dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:fitsSystemWindows="true">
+        android:background="@color/colorPrimaryDark"
+        android:fitsSystemWindows="true"
+        app:statusBarBackground="@color/colorAccent">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:layout_margin="@dimen/regular_offset"
-            android:src="@drawable/ic_done" />
+        <TextView
+            android:id="@+id/find_meal_text"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/fredoka_one"
+            android:text="Find a meal!"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
 
     </android.support.design.widget.CoordinatorLayout>
 
