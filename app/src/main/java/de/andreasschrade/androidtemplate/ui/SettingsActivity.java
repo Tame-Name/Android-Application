@@ -86,7 +86,7 @@ public class SettingsActivity extends BaseActivity {
 
     @Override
     protected int getSelfNavDrawerItem() {
-        return R.id.nav_settings;
+        return 0;
     }
 
     @Override

@@ -32,7 +32,7 @@ public class DummyContent {
         //addItem(new DummyItem("5", R.drawable.p5, "Quote #5", "Steve Jobs","Deciding what not do do is as important as deciding what to do."));
     }
 
-    private static void addItem(DummyItem item) {
+    public static void addItem(DummyItem item) {
         ITEMS.add(item);
         ITEM_MAP.put(item.id, item);
     }
