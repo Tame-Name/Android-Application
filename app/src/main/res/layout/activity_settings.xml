@@ -10,20 +10,10 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <include layout="@layout/include_toolbar" />
-
-        <Button
-            android:id="@+id/button_cp"
+        <fragment android:name="de.andreasschrade.androidtemplate.ui.SettingsActivity$SettingsFragment"
+            android:id="@+id/settings_fragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Change My Password" />
-
-        <Button
-            android:id="@+id/button_lg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="LOG OUT"
-            android:background="#FF3333"/>
-
+            android:layout_height="match_parent" />
     </LinearLayout>
     <include layout="@layout/include_navigation" />
 
