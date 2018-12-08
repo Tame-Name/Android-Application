@@ -9,11 +9,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-
-import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.auth.FirebaseAuth;
-
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 import de.andreasschrade.androidtemplate.R;
 import de.andreasschrade.androidtemplate.ui.SettingsActivity;
 import de.andreasschrade.androidtemplate.ui.ViewSamplesActivity;
@@ -43,6 +41,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         setupNavDrawer();
+        AppCenter.start(getApplication(), "a50e5957-6155-4e06-9431-a9b0b9c0287b",
+                Analytics.class, Crashes.class);
     }
 
     /**
