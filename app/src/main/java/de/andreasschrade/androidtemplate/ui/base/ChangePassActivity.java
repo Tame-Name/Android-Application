@@ -30,37 +30,36 @@ public class ChangePassActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_pass);
-        ip=(EditText)findViewById(R.id.editText);
+        ip=(EditText)findViewById(R.id.new_p);
         button_sav =(Button)findViewById(R.id.button_sr);
         button_sav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                changep(view);
+                finish();
                 back_main();
             }
         });
     }
     public void changep(View v){
-        final FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
-        AuthCredential credential = EmailAuthProvider
-                .getCredential("user@example.com", "password1234");
-        user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()){
-                    user.updatePassword(ip.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
+        FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
+        if(user!=null){
+            user.updatePassword(ip.getText().toString())
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
+                            if (task.isSuccessful()){
                                 Toast.makeText(ChangePassActivity.this, "Change successfully", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(ChangePassActivity.this, "Fail to change", Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                Toast.makeText(ChangePassActivity.this, "ERROR", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
-                }
-            }
-        });
-    }
+
+
+
+}}
     public void back_main(){
         Intent i = new Intent(this, SettingsActivity.class);
         startActivity(i);

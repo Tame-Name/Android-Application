@@ -11,6 +11,11 @@
             android:icon="@drawable/fruit"
             android:background="@color/colorPrimaryDark"
             android:title="Create Meal" />
+        <item
+            android:id="@+id/to_set"
+            android:icon="@drawable/ic_action_settings"
+            android:background="@color/colorPrimaryDark"
+            android:title="Settings" />
 
     </group>
 
