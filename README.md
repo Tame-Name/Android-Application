@@ -7,7 +7,7 @@ Once the account creation is successful, the user is sent to the main activity o
 
 ## Repository Organization / Structure
 The application is included in this repository. Test cases can be found as classes within the  following folder:
-      Android-Application/app/src/androidTest/java/de/andreasschrade/androidtemplate/ui/base/
+      https://github.com/Tame-Name/Android-Application/tree/master/app/src/androidTest/java/de/andreasschrade/androidtemplate/ui/base
       
 Milestone deliverables: https://github.com/Tame-Name/Milestones
        
