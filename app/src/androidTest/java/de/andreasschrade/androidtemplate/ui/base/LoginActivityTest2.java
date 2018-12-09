@@ -1,6 +1,8 @@
 package de.andreasschrade.androidtemplate.ui.base;
 
-
+import android.support.test.runner.AndroidJUnit4;
+import com.microsoft.appcenter.espresso.Factory;
+import com.microsoft.appcenter.espresso.ReportHelper;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
@@ -12,6 +14,7 @@ import android.view.ViewParent;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
+import org.junit.After;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,6 +35,8 @@ import static org.hamcrest.Matchers.allOf;
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class LoginActivityTest2 {
+    @Rule
+    public ReportHelper reportHelper = Factory.getReportHelper();
 
     @Rule
     public ActivityTestRule<LoginActivity> mActivityTestRule = new ActivityTestRule<>(LoginActivity.class);
@@ -71,6 +76,10 @@ public class LoginActivityTest2 {
                 allOf(withId(R.id.email_sign_in_button),
                         isDisplayed()));
         button.check(matches(isDisplayed()));
+    }
+    @After
+    public void TearDown(){
+        reportHelper.label("Stopping App");
     }
 
 
